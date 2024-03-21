@@ -2,32 +2,32 @@ syntax = "proto3";
 
 package greet;
 
-// The greeting service definition.
+
 service Greeter {
 	// Unary
-	rpc SayHello (HelloRequest) returns (HelloReply);
+	rpc SayGame (GameRequest) returns (GameReply);
 
 	// Server Streaming
-	rpc ParrotSaysHello (HelloRequest) returns (stream HelloReply);
-	
-	// Client Streaming
-	rpc ChattyClientSaysHello (stream HelloRequest) returns (DelayedReply);
+	rpc SayConsole (ConsoleRequest) returns (stream GameReply);
 
 	// Both Streaming
-	rpc InteractingHello (stream HelloRequest) returns (stream HelloReply);
+	rpc StreamGames (stream GameRequest) returns (stream GamesReply);
 }
 
-// The request message containing the user's name.
-message HelloRequest {
-  string name = 1;
-  string greeting = 2;
+
+message GameRequest {
+  	string game = 1;
 }
 
-// The response message containing the greetings.
-message HelloReply {
-  string message = 1;
+message ConsoleRequest {
+	string game = 1;
+	string console = 2; 
 }
 
-message DelayedReply {
-	repeated HelloReply message = 1;
+message GameReply {
+  	string message = 1;
+}
+
+message GamesReply {
+	repeated GameReply message = 1;
 }

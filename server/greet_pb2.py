@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(
-    b'\n\x0bgreet.proto\x12\x05greet".\n\x0cHelloRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x10\n\x08greeting\x18\x02 \x01(\t"\x1d\n\nHelloReply\x12\x0f\n\x07message\x18\x01 \x01(\t"2\n\x0c\x44\x65layedReply\x12"\n\x07message\x18\x01 \x03(\x0b\x32\x11.greet.HelloReply2\xff\x01\n\x07Greeter\x12\x32\n\x08SayHello\x12\x13.greet.HelloRequest\x1a\x11.greet.HelloReply\x12;\n\x0fParrotSaysHello\x12\x13.greet.HelloRequest\x1a\x11.greet.HelloReply0\x01\x12\x43\n\x15\x43hattyClientSaysHello\x12\x13.greet.HelloRequest\x1a\x13.greet.DelayedReply(\x01\x12>\n\x10InteractingHello\x12\x13.greet.HelloRequest\x1a\x11.greet.HelloReply(\x01\x30\x01\x62\x06proto3'
+    b'\n\x0bgreet.proto\x12\x05greet"\x1b\n\x0bGameRequest\x12\x0c\n\x04game\x18\x01 \x01(\t"/\n\x0e\x43onsoleRequest\x12\x0c\n\x04game\x18\x01 \x01(\t\x12\x0f\n\x07\x63onsole\x18\x02 \x01(\t"\x1c\n\tGameReply\x12\x0f\n\x07message\x18\x01 \x01(\t"/\n\nGamesReply\x12!\n\x07message\x18\x01 \x03(\x0b\x32\x10.greet.GameReply2\xad\x01\n\x07Greeter\x12/\n\x07SayGame\x12\x12.greet.GameRequest\x1a\x10.greet.GameReply\x12\x37\n\nSayConsole\x12\x15.greet.ConsoleRequest\x1a\x10.greet.GameReply0\x01\x12\x38\n\x0bStreamGames\x12\x12.greet.GameRequest\x1a\x11.greet.GamesReply(\x01\x30\x01\x62\x06proto3'
 )
 
 _globals = globals()
@@ -22,12 +22,14 @@ _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, "greet_pb2", _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
     DESCRIPTOR._options = None
-    _globals["_HELLOREQUEST"]._serialized_start = 22
-    _globals["_HELLOREQUEST"]._serialized_end = 68
-    _globals["_HELLOREPLY"]._serialized_start = 70
-    _globals["_HELLOREPLY"]._serialized_end = 99
-    _globals["_DELAYEDREPLY"]._serialized_start = 101
-    _globals["_DELAYEDREPLY"]._serialized_end = 151
-    _globals["_GREETER"]._serialized_start = 154
-    _globals["_GREETER"]._serialized_end = 409
+    _globals["_GAMEREQUEST"]._serialized_start = 22
+    _globals["_GAMEREQUEST"]._serialized_end = 49
+    _globals["_CONSOLEREQUEST"]._serialized_start = 51
+    _globals["_CONSOLEREQUEST"]._serialized_end = 98
+    _globals["_GAMEREPLY"]._serialized_start = 100
+    _globals["_GAMEREPLY"]._serialized_end = 128
+    _globals["_GAMESREPLY"]._serialized_start = 130
+    _globals["_GAMESREPLY"]._serialized_end = 177
+    _globals["_GREETER"]._serialized_start = 180
+    _globals["_GREETER"]._serialized_end = 353
 # @@protoc_insertion_point(module_scope)
